@@ -38,3 +38,12 @@ export function Rolelist(){
         }
     )
 }
+
+export function Authority(){
+    return service(
+        {
+            url:"/getAuthorityList",
+            method:"get"
+        }
+    )
+}

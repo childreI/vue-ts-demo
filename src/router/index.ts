@@ -24,7 +24,25 @@ const routes: Array<RouteRecordRaw> = [
           title: "用户列表"
         },
         component: () => import(/* webpackChunkName: "user" */ '../views/UserView.vue')
-      }
+      },
+      {
+        name: 'role',
+        path: 'role',
+        meta: {
+          isShow:true,
+          title: "角色列表"
+        },
+        component: () => import(/* webpackChunkName: "role" */ '../views/RoleView.vue')
+      },
+      {
+        name: 'authority',
+        path: 'authority',
+        meta: {
+          isShow:true,
+          title: "权限列表"
+        },
+        component: () => import(/* webpackChunkName: "authority" */ '../views/AuthorityView.vue')
+      },
     ]
   },
   {
