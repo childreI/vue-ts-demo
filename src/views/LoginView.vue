@@ -20,9 +20,9 @@
             </el-form-item>
             <el-form-item>
             <el-button type="primary" @click="submitForm(ruleFormRef)"
-                >Submit</el-button
+                >登录</el-button
             >
-            <el-button @click="resetForm(ruleFormRef)">Reset</el-button>
+            <el-button @click="resetForm(ruleFormRef)">重置</el-button>
             </el-form-item>
         </el-form>
     </div>
@@ -57,13 +57,13 @@ export default defineComponent({
                         localStorage.setItem('token',res.data.token)
                         router.push('/')
                     })
-                // console.log('submit!')
+                console.log('submit!')
                 } else {
                 console.log('error submit!')
                 return false
                 }
             })
-            }
+        }
         const resetForm = (formEl: FormInstance | undefined) => {
             if (!formEl) return
             formEl.resetFields()

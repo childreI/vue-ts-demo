@@ -2,7 +2,7 @@ export interface ListInt {
     name: string
     roleId: number
     roleList?: ListInt[]
-    viewRole?: string
+    ViewRole?: string
 }
 export class InitData{
     id:number

@@ -32,8 +32,7 @@ export default defineComponent({
         const data = reactive(new InitData())
         onMounted(()=>{
             Rolelist().then(res=>{
-                data.list=res.data
-                
+                data.list=res.data              
             })
         })
         const addRole = () => {
@@ -58,9 +57,11 @@ export default defineComponent({
                 })
             }
         const changeRole=(row:ListInt)=>{
+            console.log(row);
+            
             router.push({
                 name:'authority',
-                params:{
+                query:{
                     id:row.roleId,
                     authority:row.authority
                 }

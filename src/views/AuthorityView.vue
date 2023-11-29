@@ -16,14 +16,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, reactive, toRef, toRefs } from 'vue'
+import { defineComponent, onMounted, reactive, toRefs } from 'vue'
 import { useRoute } from 'vue-router';
 import { InitData } from '@/type/authority';
 import {Authority} from '@/request/api'
 export default defineComponent({
     setup () {
         const route = useRoute()
-        const params:any = route.params
+        const params:any = route.query
+        console.log(route,'haha');
+        
         const data = reactive(new InitData(params.id,params.authority))
         onMounted(()=>{
             Authority().then(res=>{
